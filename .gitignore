@@ -1,0 +1,20 @@
+# Paquets et caches
+/auto-save-list/
+/eln-cache/
+/var/
+/straight/
+/elpa/
+/url/
+/bookmarks
+/tramp
+/projectile-bookmarks.eld
+**/.DS_Store
+/old/
+straight/repos/
+straight/build/
+straight/links/
+straight/build-cache.el
+straight/modified/
+straight/cache/
+!straight/versions/
+!straight/versions/default.el
