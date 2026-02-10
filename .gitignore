@@ -1,20 +1,22 @@
-# Paquets et caches
-/auto-save-list/
-/eln-cache/
-/var/
-/straight/
-/elpa/
-/url/
-/bookmarks
-/tramp
-/projectile-bookmarks.eld
-**/.DS_Store
-/old/
-straight/repos/
-straight/build/
-straight/links/
-straight/build-cache.el
-straight/modified/
-straight/cache/
+# ===== Emacs cache / local state =====
+auto-save-list/
+eln-cache/
+var/
+url/
+tramp
+recentf
+places
+bookmarks
+old/
+
+# Projectile (local)
+projectile-bookmarks.eld
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ===== straight.el =====
+straight/*
 !straight/versions/
 !straight/versions/default.el
