@@ -8,6 +8,8 @@ recentf
 places
 bookmarks
 old/
+eshell/
+projects
 
 # Projectile (local)
 projectile-bookmarks.eld
