@@ -14,5 +14,10 @@
 (use-package bind-key
   :straight t)
 
+
+(use-package yaml-mode
+  :mode "\\.ya?ml\\'")
+
 (provide 'core-packages)
+
 ;;; core-packages.el ends here

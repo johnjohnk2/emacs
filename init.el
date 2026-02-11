@@ -6,6 +6,9 @@
 (dolist (dir '("backup/" "auto-save/" "savehist/"))
   (make-directory (expand-file-name dir user-cache-directory) t))
 
+(setq backup-directory-alist
+      `(("." . ,(expand-file-name "backup/" user-cache-directory))))
+
 (setq custom-file (expand-file-name "custom.el" user-cache-directory))
 (when (file-exists-p custom-file)
   (load custom-file 'noerror 'nomessage))
@@ -48,6 +51,18 @@
 (require 'core-prog)
 (require 'core-term)
 (require 'core-misc)
+
+;; Revenir à un GC raisonnable après le démarrage
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (setq gc-cons-threshold (* 64 1024 1024)
+                  gc-cons-percentage 0.1)
+            (message "Emacs ready in %.2fs with %d GCs"
+                     (float-time (time-subtract after-init-time before-init-time))
+                     gcs-done)))
+
+
+
 
 (provide 'init)
 ;;; init.el ends here
